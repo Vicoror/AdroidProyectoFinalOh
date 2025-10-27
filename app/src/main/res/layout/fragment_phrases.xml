@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/phrasesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principalextralight">
+
+    <!-- Top Bar con MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="@color/textgrey"
+            app:cardUseCompatPadding="true"
+            android:outlineProvider="background"
+            >
+
+            <!-- Imagen + Número (izquierda) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="start|center_vertical">
+
+                <ImageView
+                    android:id="@+id/iconLives"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/macaron_c5a4da"
+                    android:contentDescription="@string/vidas" />
+
+                <TextView
+                    android:id="@+id/livesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_5"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Título ABSOLUTAMENTE centrado -->
+            <TextView
+                android:id="@+id/titleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phrases"
+                android:textColor="@color/textdark"
+                android:textSize="26sp"
+                android:fontFamily="@font/poetsen_one_regular"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <ScrollView
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/macaronContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal" />
+    </ScrollView>
+
+    <!-- Vista emergente también con MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/viewMsgPrincipal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/labelMsgPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vamos_con_las_frases"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMsgPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/continuarphrases"
+                android:layout_gravity="center"
+                app:backgroundTint="@color/principal"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

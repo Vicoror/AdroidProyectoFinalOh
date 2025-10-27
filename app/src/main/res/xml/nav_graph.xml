@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- ✅ SPLASH FRAGMENT (primera pantalla) -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.vicoror.appandroidfinal.ui.main.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- LOGIN FRAGMENT -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.vicoror.appandroidfinal.ui.main.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_loginDatosFragment"
+            app:destination="@id/loginDatosFragment" />
+    </fragment>
+
+    <!-- LOGIN DATOS FRAGMENT -->
+    <fragment
+        android:id="@+id/loginDatosFragment"
+        android:name="com.vicoror.appandroidfinal.ui.main.LoginDatosFragment"
+        tools:layout="@layout/fragment_login_datos">
+
+        <action
+            android:id="@+id/action_loginDatosFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_loginDatosFragment_to_surveyFragment"
+            app:destination="@id/surveyFragment" />
+    </fragment>
+
+    <!-- SURVEY FRAGMENT -->
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="com.vicoror.appandroidfinal.ui.main.SurveyFragment"
+        tools:layout="@layout/fragment_survey">
+        <action
+            android:id="@+id/action_surveyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <!-- HOME FRAGMENT -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.vicoror.appandroidfinal.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_phrasesFragment"
+            app:destination="@id/phrasesFragment" />
+    </fragment>
+
+    <!-- PHRASES FRAGMENT -->
+    <fragment
+        android:id="@+id/phrasesFragment"
+        android:name="com.vicoror.appandroidfinal.ui.phrases.PhrasesFragment"
+        android:label="Phrases"
+        tools:layout="@layout/fragment_phrases">
+        <action
+            android:id="@+id/action_phrasesFragment_to_phrasesEx1Fragment"
+            app:destination="@id/phrasesEx1Fragment">
+            <argument
+                android:name="selectedBlockIndex"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <!-- PHRASES EXERCISE 1 FRAGMENT -->
+    <fragment
+        android:id="@+id/phrasesEx1Fragment"
+        android:name="com.vicoror.appandroidfinal.ui.phrases.PhrasesEx1Fragment"
+        android:label="Phrases Exercise 1"
+        tools:layout="@layout/fragment_phrases_ex1">
+
+        <!-- 🔹 Acción para regresar al menú de frases -->
+        <action
+            android:id="@+id/action_phrasesEx1Fragment_to_phrasesFragment"
+            app:destination="@id/phrasesFragment" />
+    </fragment>
+
+
+</navigation>

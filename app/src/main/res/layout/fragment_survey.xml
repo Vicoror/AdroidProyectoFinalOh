@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.SurveyFragment">
+
+    <TextView
+        android:id="@+id/tvSurvey"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="91dp"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:text="@string/tvSurvey"
+        android:textAlignment="center"
+        android:textColor="@color/titles"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSurvey"
+        app:layout_constraintBottom_toTopOf="@id/btnEnter"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            >
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupOpciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!-- Opción 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/plane" />
+
+                    <RadioButton
+                        android:id="@+id/rbViajar"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="40dp"
+                        android:textSize="24sp"
+                        app:buttonTint="@color/principal"
+                        android:fontFamily="@font/nunito_medium"
+                        android:layoutDirection="rtl"
+                        android:text="@string/opc1" />
+                </LinearLayout>
+
+                <!-- Opción 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/study"
+                        android:contentDescription="@string/estudios"/>
+
+                    <RadioButton
+                        android:id="@+id/rbEstudios"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opc2"
+                        android:layout_marginEnd="40dp"
+                        android:textSize="24sp"
+                        app:buttonTint="@color/principal"
+                        android:fontFamily="@font/nunito_medium"
+                        android:layoutDirection="rtl"
+                        />
+                </LinearLayout>
+
+                <!-- Opción 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/work"
+                        android:contentDescription="@string/trabajo"/>
+
+                    <RadioButton
+                        android:id="@+id/rbTrabajo"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opc3"
+                        android:layout_marginEnd="40dp"
+                        android:textSize="24sp"
+                        app:buttonTint="@color/principal"
+                        android:fontFamily="@font/nunito_medium"
+                        android:layoutDirection="rtl"/>
+                </LinearLayout>
+
+                <!-- Opción 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/hobby"
+                        android:contentDescription="@string/hobby"/>
+
+                    <RadioButton
+                        android:id="@+id/rbHobby"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opc5"
+                        android:layout_marginEnd="40dp"
+                        android:textSize="24sp"
+                        app:buttonTint="@color/principal"
+                        android:fontFamily="@font/nunito_medium"
+                        android:layoutDirection="rtl" />
+                </LinearLayout>
+
+                <!-- Opción 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/exam"
+                        android:contentDescription="@string/examen"/>
+
+                    <RadioButton
+                        android:id="@+id/rbExamen"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opc4"
+                        android:layout_marginEnd="40dp"
+                        android:textSize="24sp"
+                        app:buttonTint="@color/principal"
+                        android:fontFamily="@font/nunito_medium"
+                        android:layoutDirection="rtl"/>
+                </LinearLayout>
+
+                <!-- Opción Otro -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/otro"
+                        android:contentDescription="@string/otro"/>
+
+                    <RadioButton
+                        android:id="@+id/rbOtro"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opc6"
+                        android:layout_marginEnd="40dp"
+                        android:textSize="24sp"
+                        app:buttonTint="@color/principal"
+                        android:fontFamily="@font/nunito_medium"
+                        android:layoutDirection="rtl"/>
+                </LinearLayout>
+            </RadioGroup>
+
+            <!-- Campo que se muestra solo si seleccionan Otro -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputOtro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/principal"
+                app:boxBackgroundMode="outline"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOtro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/inputOtro"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEnter"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:text="@string/btnEnter"
+        android:textSize="24sp"
+        android:fontFamily="@font/manrope_bold"
+        android:textColor="@android:color/white"
+        app:cornerRadius="50dp"
+        app:backgroundTint="@color/buttonred"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purplewhite"
+    android:padding="0dp">
+
+    <!-- TopBar mejorado -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/topBarExitButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_delete"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/cerrar"
+            app:tint="@color/textgrey" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/topBarLives"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- Resto de tu contenido igual -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/exercice1Label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:text="@string/exercice_1"
+                android:textColor="@color/titleslight"
+                android:fontFamily="@font/poetsen_one_regular"
+                android:gravity="center"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/tipoMemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/memoire"
+                android:textSize="18sp"
+                android:textColor="@color/titleslight"
+                android:fontFamily="@font/poetsen_one_regular"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/fraseFrLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/fraseEsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/btnAnterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/anterior"
+                android:layout_marginEnd="12dp"
+                android:visibility="visible"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSuivant"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:text="@string/suivant"
+                android:textSize="24sp"
+                android:fontFamily="@font/manrope_bold"
+                android:textColor="@color/textdark"
+                app:cornerRadius="50dp"
+                app:strokeColor="@color/principal"
+                app:strokeWidth="5dp"
+                app:backgroundTint="@color/white"
+                app:rippleColor="@color/principalextralight"
+                android:layout_marginTop="40dp"/>
+            <Button
+                android:id="@+id/btnRepetir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repetir_ejercicio"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

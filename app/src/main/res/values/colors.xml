@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="principal">#B978F2</color>
+    <color name="principallight">#DBACFA</color>
+    <color name="principalextralight">#E6DFEB</color>
+    <color name="titles">#37AAFD</color>
+    <color name="titleslight">#96D3FF</color>
+    <color name="titlesextralight">#D4E9F8</color>
+    <color name="warningred">#FF8A80</color>
+    <color name="warningblue">#A8E6CF</color>
+    <color name="textdark">#2B2B2B</color>
+    <color name="textgrey">#D9D9D9</color>
+    <color name="purplewhite">#F8F6FD</color>
+    <color name="buttonred">#FF6F91</color>
+</resources>

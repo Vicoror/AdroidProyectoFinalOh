@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="32dp"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:text="@string/titleHome"
+        android:textColor="@color/titles"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleHometrad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/titleHometrad"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleHome" />
+
+    <Button
+        android:id="@+id/btnfrases"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/principalextralight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:text="@string/btnPhra"
+        android:textColor="@color/titles"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleHometrad" />
+
+    <ImageView
+        android:id="@+id/imgPhrder"
+        android:layout_width="50dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnfrases"
+        app:layout_constraintStart_toEndOf="@id/btnfrases"
+        app:layout_constraintTop_toTopOf="@id/btnfrases"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/macaron_c5a4da" />
+
+    <ImageView
+        android:id="@+id/imgPhriz"
+        android:layout_width="50dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnfrases"
+        app:layout_constraintEnd_toStartOf="@id/btnfrases"
+        app:layout_constraintTop_toTopOf="@id/btnfrases"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/macaron_c5a4da"/>
+
+    <Button
+        android:id="@+id/btnConjug"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/principalextralight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:text="@string/btnConju"
+        android:textColor="@color/titles"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnfrases" />
+
+    <ImageView
+        android:id="@+id/imgConjder"
+        android:layout_width="50dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnConjug"
+        app:layout_constraintStart_toEndOf="@id/btnConjug"
+        app:layout_constraintTop_toTopOf="@id/btnConjug"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/macaron_8cd5c9" />
+
+    <ImageView
+        android:id="@+id/imgConjiz"
+        android:layout_width="50dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnConjug"
+        app:layout_constraintEnd_toStartOf="@id/btnConjug"
+        app:layout_constraintTop_toTopOf="@id/btnConjug"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/macaron_8cd5c9" />
+
+    <Button
+        android:id="@+id/btnVerbes"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/principalextralight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:text="@string/btnVerbes"
+        android:textColor="@color/titles"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnConjug" />
+
+    <ImageView
+        android:id="@+id/imgVerder"
+        android:layout_width="50dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnVerbes"
+        app:layout_constraintStart_toEndOf="@id/btnVerbes"
+        app:layout_constraintTop_toTopOf="@id/btnVerbes"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/macaron_ff8a80" />
+
+    <ImageView
+        android:id="@+id/imgVeriz"
+        android:layout_width="50dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnVerbes"
+        app:layout_constraintEnd_toStartOf="@id/btnVerbes"
+        app:layout_constraintTop_toTopOf="@id/btnVerbes"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/macaron_ff8a80" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

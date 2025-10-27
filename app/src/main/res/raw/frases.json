@@ -1,0 +1,356 @@
+{
+  "frases": [
+    {
+      "numfrase": 1,
+      "nivel": "B1",
+      "tipo": "Formal",
+      "fraseFr": "J'espère que ça vous a plu.",
+      "fraseEs": "Espero que les haya gustado.",
+      "categoria": "Cortesía"
+    },
+    {
+      "numfrase": 2,
+      "nivel": "B1",
+      "tipo": "Formal",
+      "fraseFr": "Demander un service.",
+      "fraseEs": "Pedir un favor.",
+      "categoria": "Interacción"
+    },
+    {
+      "numfrase": 3,
+      "nivel": "B1",
+      "tipo": "Formal",
+      "fraseFr": "Rendre un service.",
+      "fraseEs": "Hacer un favor.",
+      "categoria": "Interacción"
+    },
+    {
+      "numfrase": 4,
+      "nivel": "B2",
+      "tipo": "Informal",
+      "fraseFr": "C'est guez !",
+      "fraseEs": "Muy malo, de mala calidad, chafa.",
+      "categoria": "Expresión informal"
+    },
+    {
+      "numfrase": 5,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "C'est nul !",
+      "fraseEs": "Es malo / aburrido / pésimo / feo / tonto.",
+      "categoria": "Valoración"
+    },
+    {
+      "numfrase": 6,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "L'addition salée.",
+      "fraseEs": "La cuenta es elevada o cara.",
+      "categoria": "Restaurante"
+    },
+    {
+      "numfrase": 7,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "De petites conversations.",
+      "fraseEs": "Conversaciones triviales o banales.",
+      "categoria": "Conversación"
+    },
+    {
+      "numfrase": 8,
+      "nivel": "B2",
+      "tipo": "Neutro",
+      "fraseFr": "Être chauvin.",
+      "fraseEs": "Creerse mejor por su país de origen.",
+      "categoria": "Actitud"
+    },
+    {
+      "numfrase": 9,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "C'est pas si mal.",
+      "fraseEs": "No está tan mal.",
+      "categoria": "Valoración"
+    },
+    {
+      "numfrase": 10,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "Que ce soit le français ou autre.",
+      "fraseEs": "Ya sea el francés u otro.",
+      "categoria": "General"
+    },
+    {
+      "numfrase": 11,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "C'est quoi cette histoire, là !",
+      "fraseEs": "¿Qué es este rollo? / ¿De qué va esto?",
+      "categoria": "Expresión"
+    },
+    {
+      "numfrase": 12,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "Toi, t'as trop manqué.",
+      "fraseEs": "Te extrañé demasiado.",
+      "categoria": "Emoción"
+    },
+    {
+      "numfrase": 13,
+      "nivel": "A2",
+      "tipo": "Informal",
+      "fraseFr": "Pas de souci.",
+      "fraseEs": "No hay problema.",
+      "categoria": "Cortesía"
+    },
+    {
+      "numfrase": 14,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "Je m'en fous.",
+      "fraseEs": "Me da igual.",
+      "categoria": "Actitud"
+    },
+    {
+      "numfrase": 15,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "La tune ?",
+      "fraseEs": "¿La plata? / ¿La lana? (dinero)",
+      "categoria": "Jerga"
+    },
+    {
+      "numfrase": 16,
+      "nivel": "B2",
+      "tipo": "Informal",
+      "fraseFr": "Un peu relou.",
+      "fraseEs": "Un poco pesado / molesto.",
+      "categoria": "Expresión informal"
+    },
+    {
+      "numfrase": 17,
+      "nivel": "B2",
+      "tipo": "Informal",
+      "fraseFr": "Tu t'en tapes.",
+      "fraseEs": "Te importa un bledo.",
+      "categoria": "Expresión informal"
+    },
+    {
+      "numfrase": 18,
+      "nivel": "B2",
+      "tipo": "Vulgar",
+      "fraseFr": "Tu t'emmerdes.",
+      "fraseEs": "Te aburres. (vulgar)",
+      "categoria": "Vulgaridad"
+    },
+    {
+      "numfrase": 19,
+      "nivel": "B2",
+      "tipo": "Informal",
+      "fraseFr": "Pas de faire de conneries.",
+      "fraseEs": "No hagas tonterías.",
+      "categoria": "Advertencia"
+    },
+    {
+      "numfrase": 20,
+      "nivel": "A2",
+      "tipo": "Formal",
+      "fraseFr": "Dépêchez-vous !",
+      "fraseEs": "¡Date prisa! / ¡Apúrense!",
+      "categoria": "Urgencia"
+    },
+    {
+      "numfrase": 21,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "Tiens, tiens, tiens ...",
+      "fraseEs": "Vaya, vaya, vaya...",
+      "categoria": "Sorpresa"
+    },
+    {
+      "numfrase": 22,
+      "nivel": "A2",
+      "tipo": "Informal",
+      "fraseFr": "Calme-toi !",
+      "fraseEs": "¡Cálmate!",
+      "categoria": "Emoción"
+    },
+    {
+      "numfrase": 23,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "Ça m'étonne !",
+      "fraseEs": "¡Eso me sorprende!",
+      "categoria": "Sorpresa"
+    },
+    {
+      "numfrase": 24,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "Ça te va bien !",
+      "fraseEs": "¡Te queda bien! / ¡Te sienta bien!",
+      "categoria": "Elogio"
+    },
+    {
+      "numfrase": 25,
+      "nivel": "A2",
+      "tipo": "Neutro",
+      "fraseFr": "Bon courage !",
+      "fraseEs": "¡Mucho ánimo!",
+      "categoria": "Aliento"
+    },
+    {
+      "numfrase": 26,
+      "nivel": "A2",
+      "tipo": "Neutro",
+      "fraseFr": "Tiens ...",
+      "fraseEs": "Toma... / Toma, ten...",
+      "categoria": "Dar algo"
+    },
+    {
+      "numfrase": 27,
+      "nivel": "A2",
+      "tipo": "Informal",
+      "fraseFr": "Je suis trop contente.",
+      "fraseEs": "Estoy muy contenta.",
+      "categoria": "Emoción"
+    },
+    {
+      "numfrase": 28,
+      "nivel": "A2",
+      "tipo": "Neutro",
+      "fraseFr": "Qu'est-ce qu'il y a ?",
+      "fraseEs": "¿Qué pasa? / ¿Qué hay? / ¿Qué ocurre?",
+      "categoria": "Pregunta"
+    },
+    {
+      "numfrase": 29,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "Est-ce que tu te rends compte ?",
+      "fraseEs": "¿Te das cuenta?",
+      "categoria": "Reflexión"
+    },
+    {
+      "numfrase": 30,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "Tu es complètement fou !",
+      "fraseEs": "¡Estás completamente loco!",
+      "categoria": "Expresión"
+    },
+    {
+      "numfrase": 31,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "C'est ce qui te fait chier.",
+      "fraseEs": "Eso es lo que te molesta.",
+      "categoria": "Molestia"
+    },
+    {
+      "numfrase": 32,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "Je me suis engueulé avec mon frère.",
+      "fraseEs": "Me peleé/discutí con mi hermano.",
+      "categoria": "Conflicto"
+    },
+    {
+      "numfrase": 33,
+      "nivel": "A2",
+      "tipo": "Informal",
+      "fraseFr": "Je suis contente de te voir !",
+      "fraseEs": "¡Me alegra verte!",
+      "categoria": "Saludo"
+    },
+    {
+      "numfrase": 34,
+      "nivel": "B2",
+      "tipo": "Informal",
+      "fraseFr": "Je me suis tapé...",
+      "fraseEs": "Me tuve que aguantar / sufrir...",
+      "categoria": "Expresión informal"
+    },
+    {
+      "numfrase": 35,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "Je n'ai rien dit.",
+      "fraseEs": "No dije nada.",
+      "categoria": "Conversación"
+    },
+    {
+      "numfrase": 36,
+      "nivel": "A2",
+      "tipo": "Neutro",
+      "fraseFr": "Ne t'inquiète pas.",
+      "fraseEs": "No te preocupes.",
+      "categoria": "Tranquilidad"
+    },
+    {
+      "numfrase": 37,
+      "nivel": "B1",
+      "tipo": "Neutro",
+      "fraseFr": "J'ai du mal à le croire.",
+      "fraseEs": "Me cuesta creerlo.",
+      "categoria": "Duda"
+    },
+    {
+      "numfrase": 38,
+      "nivel": "A2",
+      "tipo": "Neutro",
+      "fraseFr": "Tant pis !",
+      "fraseEs": "¡Mala suerte! / ¡Qué le vamos a hacer!",
+      "categoria": "Resignación"
+    },
+    {
+      "numfrase": 39,
+      "nivel": "A2",
+      "tipo": "Informal",
+      "fraseFr": "Vas-y !",
+      "fraseEs": "¡Adelante! / ¡Vamos!",
+      "categoria": "Aliento"
+    },
+    {
+      "numfrase": 40,
+      "nivel": "A2",
+      "tipo": "Neutro",
+      "fraseFr": "Bien sûr !",
+      "fraseEs": "¡Claro! / ¡Por supuesto!",
+      "categoria": "Afirmación"
+    },
+    {
+      "numfrase": 41,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "Tu t'en sors.",
+      "fraseEs": "Te las arreglas. / Sales adelante.",
+      "categoria": "Valoración"
+    },
+    {
+      "numfrase": 42,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "Grave !",
+      "fraseEs": "¡De verdad! / ¡En serio!",
+      "categoria": "Jerga"
+    },
+    {
+      "numfrase": 43,
+      "nivel": "B1",
+      "tipo": "Informal",
+      "fraseFr": "On peut décaler ?",
+      "fraseEs": "¿Podemos cambiar la hora? / ¿Retrasamos?",
+      "categoria": "Planes"
+    },
+    {
+      "numfrase": 44,
+      "nivel": "A2",
+      "tipo": "Informal",
+      "fraseFr": "Tu fais quoi là ?",
+      "fraseEs": "¿Qué haces? / ¿Qué estás haciendo?",
+      "categoria": "Pregunta"
+    }
+  ]
+}
