@@ -5,4 +5,5 @@ plugins {
     id("androidx.navigation.safeargs.kotlin") version "2.7.7" apply false
     id("com.google.dagger.hilt.android") version "2.48" apply false
     kotlin("kapt") version "1.9.0" apply false
+    id("com.google.gms.google-services") version "4.4.2" apply false
 }

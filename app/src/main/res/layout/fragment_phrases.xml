@@ -18,7 +18,6 @@
         app:cardElevation="4dp"
         app:cardPreventCornerOverlap="true">
 
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,8 +25,7 @@
             app:cardElevation="16dp"
             app:cardBackgroundColor="@color/textgrey"
             app:cardUseCompatPadding="true"
-            android:outlineProvider="background"
-            >
+            android:outlineProvider="background">
 
             <!-- Imagen + Número (izquierda) -->
             <LinearLayout
@@ -72,11 +70,13 @@
         </FrameLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
+    <!-- ScrollView entre TopBar y BottomTabBar -->
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomTabBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:padding="16dp">
 
@@ -88,40 +88,110 @@
             android:gravity="center_horizontal" />
     </ScrollView>
 
-    <!-- Vista emergente también con MaterialCardView -->
+    <!-- Bottom Tab Bar (AGREGADO) -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/viewMsgPrincipal"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="16dp"
+        android:id="@+id/bottomTabBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="8dp"
         app:cardBackgroundColor="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/labelMsgPrincipal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/vamos_con_las_frases"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="16dp"/>
+            <!-- Tab Home -->
+            <LinearLayout
+                android:id="@+id/tabHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@color/principalextralight">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnMsgPrincipal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/continuarphrases"
-                android:layout_gravity="center"
-                app:backgroundTint="@color/principal"/>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_home"
+                    app:tint="@color/principal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home"
+                    android:textSize= "10sp"
+                    android:textColor="@color/principal"
+                    android:fontFamily="@font/nunito_medium" />
+
+            </LinearLayout>
+
+
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <!-- OVERLAY que cubre toda la pantalla -->
+    <FrameLayout
+        android:id="@+id/overlayMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <!-- TARJETA DEL MENSAJE -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/viewMsgPrincipal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageButton
+                    android:id="@+id/btnCerrarMsg"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="start"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp"
+                    android:src="@android:drawable/ic_delete"
+                    app:tint="@color/textgrey"
+                    android:contentDescription="@string/cerrar_mensaje" />
+
+                <TextView
+                    android:id="@+id/labelMsgPrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/titles"
+                    android:fontFamily="@font/hachi_maru_pop_regular"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMsgPrincipal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/continuarphrases"
+                    android:fontFamily="@font/nunito_medium"
+                    android:layout_gravity="center"
+                    app:backgroundTint="@color/principal"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
 </RelativeLayout>

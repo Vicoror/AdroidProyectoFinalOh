@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 import com.vicoror.appandroidfinal.R
 import com.vicoror.appandroidfinal.databinding.FragmentSplashBinding
 
@@ -26,13 +28,23 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Animación del logo
         binding.ivLogo.animate().setDuration(1500).rotation(360f).start()
 
-        // Esperar 2 segundos y navegar al LoginFragment
         binding.root.postDelayed({
-            findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+            checkAuthAndNavigate()
         }, 2000)
+    }
+
+    private fun checkAuthAndNavigate() {
+        val currentUser = Firebase.auth.currentUser
+
+        if (currentUser != null && isAdded) {
+            // USUARIO YA LOGUEADO → Ir directo a HOME
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+        } else if (isAdded) {
+            // No logueado → Ir a LOGIN
+            findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+        }
     }
 
     override fun onDestroyView() {

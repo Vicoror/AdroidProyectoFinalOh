@@ -48,6 +48,28 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/exercice1Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/exercice_1"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/tipoMemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/memoire"
+        android:textSize="24sp"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
     <!-- Resto de tu contenido igual -->
     <ScrollView
         android:layout_width="match_parent"
@@ -55,80 +77,121 @@
         android:layout_weight="1"
         android:padding="16dp">
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardContenedor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="16dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="24dp"
+            app:strokeWidth="3dp"
+            app:cardBackgroundColor="@android:color/white"
 
-            <TextView
-                android:id="@+id/exercice1Label"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:text="@string/exercice_1"
-                android:textColor="@color/titleslight"
-                android:fontFamily="@font/poetsen_one_regular"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:layout_marginTop="40dp"/>
+                android:padding="24dp">
 
-            <TextView
-                android:id="@+id/tipoMemo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/memoire"
-                android:textSize="18sp"
-                android:textColor="@color/titleslight"
-                android:fontFamily="@font/poetsen_one_regular"
-                android:gravity="center"
-                android:layout_marginTop="20dp"/>
+                <!-- Tus elementos -->
+                <TextView
+                    android:id="@+id/fraseFrLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:textColor="@color/titles"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp" />
 
-            <TextView
-                android:id="@+id/fraseFrLabel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginTop="40dp"/>
+                <TextView
+                    android:id="@+id/fraseEsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp" />
 
-            <TextView
-                android:id="@+id/fraseEsLabel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:layout_marginTop="20dp"/>
-            <Button
-                android:id="@+id/btnAnterior"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/anterior"
-                android:layout_marginEnd="12dp"
-                android:visibility="visible"/>
+                <ImageButton
+                    android:id="@+id/btnSonido"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_sound"
+                    app:tint="@color/principal"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="25dp" />
+
+                <TextView
+                    android:id="@+id/msgCompletado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bloque_ya_completado_anteriormente"
+                    android:textSize="18sp"
+                    android:textColor="@color/textgrey"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/manrope_regular"/>
 
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSuivant"
-                android:layout_width="match_parent"
-                android:layout_height="61dp"
-                android:text="@string/suivant"
-                android:textSize="24sp"
-                android:fontFamily="@font/manrope_bold"
-                android:textColor="@color/textdark"
-                app:cornerRadius="50dp"
-                app:strokeColor="@color/principal"
-                app:strokeWidth="5dp"
-                app:backgroundTint="@color/white"
-                app:rippleColor="@color/principalextralight"
-                android:layout_marginTop="40dp"/>
-            <Button
-                android:id="@+id/btnRepetir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/repetir_ejercicio"
-                android:visibility="gone"
-                android:layout_marginTop="16dp"/>
+                <TextView
+                    android:id="@+id/txtBloqueCompletado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bloque_completado"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:layout_marginTop="20dp" />
 
-        </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
     </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnterior"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        app:icon="@drawable/arrow"
+        app:iconSize="46dp"
+        app:iconTint="@color/titleslight"
+        app:iconGravity="textStart"
+        android:backgroundTint="#01FFFFFF"
+        app:rippleColor="@color/principallight" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSuivant"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:text="@string/suivant"
+        android:textSize="24sp"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:textColor="@color/textdark"
+        app:cornerRadius="50dp"
+        app:strokeColor="@color/principal"
+        app:strokeWidth="5dp"
+        app:backgroundTint="@color/white"
+        app:rippleColor="@color/principalextralight"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp" />
+
+    <Button
+        android:id="@+id/btnRepetir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/repetir_ejercicio"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
 </LinearLayout>

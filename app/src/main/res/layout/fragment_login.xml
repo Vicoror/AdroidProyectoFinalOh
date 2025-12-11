@@ -59,6 +59,9 @@
         android:layout_height="79dp"
         android:layout_marginTop="60dp"
         android:translationX="80dp"/>
+        <!-- android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless" -->
     <ImageView
         android:id="@+id/google"
         app:layout_constraintTop_toBottomOf="@id/tvContinuar"
@@ -68,7 +71,10 @@
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:layout_marginTop="60dp"
-        android:translationX="-80dp"/>
+        android:translationX="-80dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
 
     <TextView
         android:id="@+id/tvTerminos"

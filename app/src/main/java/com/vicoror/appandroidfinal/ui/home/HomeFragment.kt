@@ -30,13 +30,30 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupClickListeners() {
-        // Navegar a PhrasesFragment cuando se haga clic en btnFrases
+
+        // 👉 MODO FRASES
         binding.btnfrases.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_phrasesFragment)
+            val bundle = Bundle().apply {
+                putString("mode", "phrases")
+            }
+            findNavController().navigate(
+                R.id.action_homeFragment_to_phrasesFragment,
+                bundle
+            )
         }
 
-        // Puedes agregar más botones aquí según necesites
+        // 👉 MODO VERBES
+        binding.btnVerbes.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString("mode", "verbs")
+            }
+            findNavController().navigate(
+                R.id.action_homeFragment_to_phrasesFragment,
+                bundle
+            )
+        }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -106,10 +106,10 @@ class LoginDatosFragment : Fragment() {
                             }
                         }
 
-                        is AuthViewModel.LoginState.NotAuthenticated -> {
+                        is AuthViewModel.LoginState.NeedsSurvey -> {
                             binding.progressBar.visibility = View.GONE
                             btnNext.isEnabled = true
-                            mostrarMensaje("Usuario no autenticado, completa la encuesta", false)
+                            mostrarMensaje(getString(R.string.usuario_no_autenticado_completa_la_encuesta), false)
                             hideKeyboard()
                             hasNavigated = true
                             binding.root.post {
@@ -146,7 +146,7 @@ class LoginDatosFragment : Fragment() {
             if (validarCampos()) {
                 val correo = etEmail.text.toString().trim()
                 val password = etPassword.text.toString().trim()
-                authViewModel.login(correo, password)
+                authViewModel.loginOrRegister(correo, password)
             }
         }
 
