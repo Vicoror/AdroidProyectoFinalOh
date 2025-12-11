@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/transparent">
+
+    <!-- Usando MaterialCardView para el contenedor principal -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:strokeColor="@color/warningblue"
+        app:strokeWidth="3dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/titleCorrect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bonne_r_ponse"
+                android:textColor="@color/titles"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:fontFamily="@font/hachi_maru_pop_regular"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Contenedor de respuesta con MaterialCardView -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/warningblue"
+                app:strokeWidth="2dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_marginBottom="18dp">
+
+                <TextView
+                    android:id="@+id/textAnswerCorrect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text=""
+                    app:cornerRadius="12dp"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:textColor="@color/textdark"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Botón usando MaterialButton -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinueCorrect"
+                android:layout_width="160dp"
+                android:layout_height="44dp"
+                android:text="@string/continuer"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/principallight"
+                android:fontFamily="@font/nunito_medium"
+                android:textSize="18sp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.core.widget.NestedScrollView>

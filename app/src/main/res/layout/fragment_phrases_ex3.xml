@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principalextralight"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- TopBar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/topBarExitButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_delete"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/cerrar"
+            app:tint="@color/textgrey" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/topBarLives"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- PROGRESS INDICATOR -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressEjercicio"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_margin="20dp"
+        app:indicatorColor="@color/titles"
+        app:trackColor="@color/titlesextralight"
+        app:trackThickness="13dp"
+        app:trackCornerRadius="25dp" />
+
+    <TextView
+        android:id="@+id/exercice1Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/exercice_3"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tipoMemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pratiquer_l_criture"
+        android:textSize="24sp"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- SCROLL VIEW para el contenido principal -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- CardView con el contenido -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardContenedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="24dp"
+            app:strokeWidth="2dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/frasePrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:gravity="center"
+                    android:textColor="@color/titles"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputFrase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:boxBackgroundColor="@color/titlesextralight"
+                    app:boxStrokeColor="@color/principal"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/principallight"
+                        android:fontFamily="@font/poetsen_one_regular"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:maxLength="100"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/msgCompletado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/bloque_ya_completado_anteriormente"
+                    android:textColor="@color/textgrey"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnRepetir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/titleslight"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:gravity="center"
+                    android:text="@string/repetir_ejercicio"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtBloqueCompletado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/bloque_completado"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 🔥 BOTONES JUSTO ABAJO del CardView (dentro del ScrollView) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+        android:paddingBottom="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnValider"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/principal"
+                app:rippleColor="@color/titleslight"
+                android:fontFamily="@font/poetsen_one_regular"
+                android:text="@string/valider"
+                android:textSize="18sp"
+                app:icon="@drawable/ic_launcher"
+                app:iconTint="@null"
+                app:iconGravity="textStart"
+                app:iconSize="24dp"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRespuesta"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/principallight"
+                app:rippleColor="@color/warningblue"
+                android:fontFamily="@font/hachi_maru_pop_regular"
+                android:text="@string/ver_respuesta"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/purplewhite"
+                app:cornerRadius="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPista"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/principallight"
+            app:rippleColor="@color/titlesextralight"
+            android:fontFamily="@font/hachi_maru_pop_regular"
+            android:text="@string/pista"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/purplewhite"
+            app:cornerRadius="12dp" />
+
+             </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/macaronContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

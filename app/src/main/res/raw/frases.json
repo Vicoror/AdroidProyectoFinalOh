@@ -6,7 +6,8 @@
       "tipo": "Formal",
       "fraseFr": "J'espère que ça vous a plu.",
       "fraseEs": "Espero que les haya gustado.",
-      "categoria": "Cortesía"
+      "categoria": "Cortesía",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188325/1_Ph_itcwfv.m4a"
     },
     {
       "numfrase": 2,
@@ -14,7 +15,8 @@
       "tipo": "Formal",
       "fraseFr": "Demander un service.",
       "fraseEs": "Pedir un favor.",
-      "categoria": "Interacción"
+      "categoria": "Interacción",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188326/2_Ph_ufqwg2.m4a"
     },
     {
       "numfrase": 3,
@@ -22,7 +24,8 @@
       "tipo": "Formal",
       "fraseFr": "Rendre un service.",
       "fraseEs": "Hacer un favor.",
-      "categoria": "Interacción"
+      "categoria": "Interacción",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188326/3_Ph_akj9ro.m4a"
     },
     {
       "numfrase": 4,
@@ -30,7 +33,8 @@
       "tipo": "Informal",
       "fraseFr": "C'est guez !",
       "fraseEs": "Muy malo, de mala calidad, chafa.",
-      "categoria": "Expresión informal"
+      "categoria": "Expresión informal",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188326/4_Ph_ejdsu2.m4a"
     },
     {
       "numfrase": 5,
@@ -38,7 +42,8 @@
       "tipo": "Neutro",
       "fraseFr": "C'est nul !",
       "fraseEs": "Es malo / aburrido / pésimo / feo / tonto.",
-      "categoria": "Valoración"
+      "categoria": "Valoración",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764197877/5_Ph_wfuymw.m4a"
     },
     {
       "numfrase": 6,
@@ -46,7 +51,8 @@
       "tipo": "Informal",
       "fraseFr": "L'addition salée.",
       "fraseEs": "La cuenta es elevada o cara.",
-      "categoria": "Restaurante"
+      "categoria": "Restaurante",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188329/6_Ph_ypkr1g.m4a"
     },
     {
       "numfrase": 7,
@@ -54,7 +60,8 @@
       "tipo": "Neutro",
       "fraseFr": "De petites conversations.",
       "fraseEs": "Conversaciones triviales o banales.",
-      "categoria": "Conversación"
+      "categoria": "Conversación",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188329/7_Ph_xldd3x.m4a"
     },
     {
       "numfrase": 8,
@@ -62,7 +69,8 @@
       "tipo": "Neutro",
       "fraseFr": "Être chauvin.",
       "fraseEs": "Creerse mejor por su país de origen.",
-      "categoria": "Actitud"
+      "categoria": "Actitud",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188330/8_Ph_uryff3.m4a"
     },
     {
       "numfrase": 9,
@@ -70,7 +78,8 @@
       "tipo": "Neutro",
       "fraseFr": "C'est pas si mal.",
       "fraseEs": "No está tan mal.",
-      "categoria": "Valoración"
+      "categoria": "Valoración",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188332/9_Ph_wegggr.m4a"
     },
     {
       "numfrase": 10,
@@ -78,7 +87,8 @@
       "tipo": "Neutro",
       "fraseFr": "Que ce soit le français ou autre.",
       "fraseEs": "Ya sea el francés u otro.",
-      "categoria": "General"
+      "categoria": "General",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188334/10_Ph_pcpnod.m4a"
     },
     {
       "numfrase": 11,
@@ -86,7 +96,8 @@
       "tipo": "Informal",
       "fraseFr": "C'est quoi cette histoire, là !",
       "fraseEs": "¿Qué es este rollo? / ¿De qué va esto?",
-      "categoria": "Expresión"
+      "categoria": "Expresión",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188335/11_Ph_ju0bey.m4a"
     },
     {
       "numfrase": 12,
@@ -94,7 +105,8 @@
       "tipo": "Informal",
       "fraseFr": "Toi, t'as trop manqué.",
       "fraseEs": "Te extrañé demasiado.",
-      "categoria": "Emoción"
+      "categoria": "Emoción",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188338/12_Ph_pet0vd.m4a"
     },
     {
       "numfrase": 13,
@@ -102,7 +114,8 @@
       "tipo": "Informal",
       "fraseFr": "Pas de souci.",
       "fraseEs": "No hay problema.",
-      "categoria": "Cortesía"
+      "categoria": "Cortesía",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188338/13_Ph_fpgdo0.m4a"
     },
     {
       "numfrase": 14,
@@ -110,7 +123,8 @@
       "tipo": "Informal",
       "fraseFr": "Je m'en fous.",
       "fraseEs": "Me da igual.",
-      "categoria": "Actitud"
+      "categoria": "Actitud",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188338/14_Ph_y3x6wz.m4a"
     },
     {
       "numfrase": 15,
@@ -118,7 +132,8 @@
       "tipo": "Informal",
       "fraseFr": "La tune ?",
       "fraseEs": "¿La plata? / ¿La lana? (dinero)",
-      "categoria": "Jerga"
+      "categoria": "Jerga",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188339/15_Ph_iwdcao.m4a"
     },
     {
       "numfrase": 16,
@@ -126,7 +141,8 @@
       "tipo": "Informal",
       "fraseFr": "Un peu relou.",
       "fraseEs": "Un poco pesado / molesto.",
-      "categoria": "Expresión informal"
+      "categoria": "Expresión informal",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188342/16_Ph_tjzs7h.m4a"
     },
     {
       "numfrase": 17,
@@ -134,7 +150,8 @@
       "tipo": "Informal",
       "fraseFr": "Tu t'en tapes.",
       "fraseEs": "Te importa un bledo.",
-      "categoria": "Expresión informal"
+      "categoria": "Expresión informal",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188345/17_Ph_ugj5gn.m4a"
     },
     {
       "numfrase": 18,
@@ -142,7 +159,8 @@
       "tipo": "Vulgar",
       "fraseFr": "Tu t'emmerdes.",
       "fraseEs": "Te aburres. (vulgar)",
-      "categoria": "Vulgaridad"
+      "categoria": "Vulgaridad",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188346/18_Ph_hjszcp.m4a"
     },
     {
       "numfrase": 19,
@@ -150,7 +168,8 @@
       "tipo": "Informal",
       "fraseFr": "Pas de faire de conneries.",
       "fraseEs": "No hagas tonterías.",
-      "categoria": "Advertencia"
+      "categoria": "Advertencia",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188346/19_Ph_rc19xo.m4a"
     },
     {
       "numfrase": 20,
@@ -158,7 +177,8 @@
       "tipo": "Formal",
       "fraseFr": "Dépêchez-vous !",
       "fraseEs": "¡Date prisa! / ¡Apúrense!",
-      "categoria": "Urgencia"
+      "categoria": "Urgencia",
+      "sonidoPh": "https://res.cloudinary.com/cargarfotos/video/upload/v1764188350/20_Ph_mogz60.m4a"
     },
     {
       "numfrase": 21,
@@ -166,7 +186,8 @@
       "tipo": "Neutro",
       "fraseFr": "Tiens, tiens, tiens ...",
       "fraseEs": "Vaya, vaya, vaya...",
-      "categoria": "Sorpresa"
+      "categoria": "Sorpresa",
+      "sonidoPh": ""
     },
     {
       "numfrase": 22,
@@ -174,7 +195,8 @@
       "tipo": "Informal",
       "fraseFr": "Calme-toi !",
       "fraseEs": "¡Cálmate!",
-      "categoria": "Emoción"
+      "categoria": "Emoción",
+      "sonidoPh": ""
     },
     {
       "numfrase": 23,
@@ -182,7 +204,8 @@
       "tipo": "Neutro",
       "fraseFr": "Ça m'étonne !",
       "fraseEs": "¡Eso me sorprende!",
-      "categoria": "Sorpresa"
+      "categoria": "Sorpresa",
+      "sonidoPh": ""
     },
     {
       "numfrase": 24,
@@ -190,7 +213,8 @@
       "tipo": "Informal",
       "fraseFr": "Ça te va bien !",
       "fraseEs": "¡Te queda bien! / ¡Te sienta bien!",
-      "categoria": "Elogio"
+      "categoria": "Elogio",
+      "sonidoPh": ""
     },
     {
       "numfrase": 25,
@@ -198,7 +222,8 @@
       "tipo": "Neutro",
       "fraseFr": "Bon courage !",
       "fraseEs": "¡Mucho ánimo!",
-      "categoria": "Aliento"
+      "categoria": "Aliento",
+      "sonidoPh": ""
     },
     {
       "numfrase": 26,
@@ -206,7 +231,8 @@
       "tipo": "Neutro",
       "fraseFr": "Tiens ...",
       "fraseEs": "Toma... / Toma, ten...",
-      "categoria": "Dar algo"
+      "categoria": "Dar algo",
+      "sonidoPh": ""
     },
     {
       "numfrase": 27,
@@ -214,7 +240,8 @@
       "tipo": "Informal",
       "fraseFr": "Je suis trop contente.",
       "fraseEs": "Estoy muy contenta.",
-      "categoria": "Emoción"
+      "categoria": "Emoción",
+      "sonidoPh": ""
     },
     {
       "numfrase": 28,
@@ -222,7 +249,8 @@
       "tipo": "Neutro",
       "fraseFr": "Qu'est-ce qu'il y a ?",
       "fraseEs": "¿Qué pasa? / ¿Qué hay? / ¿Qué ocurre?",
-      "categoria": "Pregunta"
+      "categoria": "Pregunta",
+      "sonidoPh": ""
     },
     {
       "numfrase": 29,
@@ -230,7 +258,8 @@
       "tipo": "Informal",
       "fraseFr": "Est-ce que tu te rends compte ?",
       "fraseEs": "¿Te das cuenta?",
-      "categoria": "Reflexión"
+      "categoria": "Reflexión",
+      "sonidoPh": ""
     },
     {
       "numfrase": 30,
@@ -238,7 +267,8 @@
       "tipo": "Informal",
       "fraseFr": "Tu es complètement fou !",
       "fraseEs": "¡Estás completamente loco!",
-      "categoria": "Expresión"
+      "categoria": "Expresión",
+      "sonidoPh": ""
     },
     {
       "numfrase": 31,
@@ -246,7 +276,8 @@
       "tipo": "Informal",
       "fraseFr": "C'est ce qui te fait chier.",
       "fraseEs": "Eso es lo que te molesta.",
-      "categoria": "Molestia"
+      "categoria": "Molestia",
+      "sonidoPh": ""
     },
     {
       "numfrase": 32,
@@ -254,7 +285,8 @@
       "tipo": "Neutro",
       "fraseFr": "Je me suis engueulé avec mon frère.",
       "fraseEs": "Me peleé/discutí con mi hermano.",
-      "categoria": "Conflicto"
+      "categoria": "Conflicto",
+      "sonidoPh": ""
     },
     {
       "numfrase": 33,
@@ -262,7 +294,8 @@
       "tipo": "Informal",
       "fraseFr": "Je suis contente de te voir !",
       "fraseEs": "¡Me alegra verte!",
-      "categoria": "Saludo"
+      "categoria": "Saludo",
+      "sonidoPh": ""
     },
     {
       "numfrase": 34,
@@ -270,7 +303,8 @@
       "tipo": "Informal",
       "fraseFr": "Je me suis tapé...",
       "fraseEs": "Me tuve que aguantar / sufrir...",
-      "categoria": "Expresión informal"
+      "categoria": "Expresión informal",
+      "sonidoPh": ""
     },
     {
       "numfrase": 35,
@@ -278,7 +312,8 @@
       "tipo": "Neutro",
       "fraseFr": "Je n'ai rien dit.",
       "fraseEs": "No dije nada.",
-      "categoria": "Conversación"
+      "categoria": "Conversación",
+      "sonidoPh": ""
     },
     {
       "numfrase": 36,
@@ -286,7 +321,8 @@
       "tipo": "Neutro",
       "fraseFr": "Ne t'inquiète pas.",
       "fraseEs": "No te preocupes.",
-      "categoria": "Tranquilidad"
+      "categoria": "Tranquilidad",
+      "sonidoPh": ""
     },
     {
       "numfrase": 37,
@@ -294,7 +330,8 @@
       "tipo": "Neutro",
       "fraseFr": "J'ai du mal à le croire.",
       "fraseEs": "Me cuesta creerlo.",
-      "categoria": "Duda"
+      "categoria": "Duda",
+      "sonidoPh": ""
     },
     {
       "numfrase": 38,
@@ -302,7 +339,8 @@
       "tipo": "Neutro",
       "fraseFr": "Tant pis !",
       "fraseEs": "¡Mala suerte! / ¡Qué le vamos a hacer!",
-      "categoria": "Resignación"
+      "categoria": "Resignación",
+      "sonidoPh": ""
     },
     {
       "numfrase": 39,
@@ -310,7 +348,8 @@
       "tipo": "Informal",
       "fraseFr": "Vas-y !",
       "fraseEs": "¡Adelante! / ¡Vamos!",
-      "categoria": "Aliento"
+      "categoria": "Aliento",
+      "sonidoPh": ""
     },
     {
       "numfrase": 40,
@@ -318,7 +357,8 @@
       "tipo": "Neutro",
       "fraseFr": "Bien sûr !",
       "fraseEs": "¡Claro! / ¡Por supuesto!",
-      "categoria": "Afirmación"
+      "categoria": "Afirmación",
+      "sonidoPh": ""
     },
     {
       "numfrase": 41,
@@ -326,7 +366,8 @@
       "tipo": "Informal",
       "fraseFr": "Tu t'en sors.",
       "fraseEs": "Te las arreglas. / Sales adelante.",
-      "categoria": "Valoración"
+      "categoria": "Valoración",
+      "sonidoPh": ""
     },
     {
       "numfrase": 42,
@@ -334,7 +375,8 @@
       "tipo": "Informal",
       "fraseFr": "Grave !",
       "fraseEs": "¡De verdad! / ¡En serio!",
-      "categoria": "Jerga"
+      "categoria": "Jerga",
+      "sonidoPh": ""
     },
     {
       "numfrase": 43,
@@ -342,7 +384,8 @@
       "tipo": "Informal",
       "fraseFr": "On peut décaler ?",
       "fraseEs": "¿Podemos cambiar la hora? / ¿Retrasamos?",
-      "categoria": "Planes"
+      "categoria": "Planes",
+      "sonidoPh": ""
     },
     {
       "numfrase": 44,
@@ -350,7 +393,8 @@
       "tipo": "Informal",
       "fraseFr": "Tu fais quoi là ?",
       "fraseEs": "¿Qué haces? / ¿Qué estás haciendo?",
-      "categoria": "Pregunta"
+      "categoria": "Pregunta",
+      "sonidoPh": ""
     }
   ]
 }

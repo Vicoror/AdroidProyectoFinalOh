@@ -1,0 +1,704 @@
+{
+  "verbos": [
+    {
+      "numfrase": 1,
+      "nivel": "A1-A2",
+      "fraseFr": "Appeler",
+      "fraseEs": "Llamar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190181/1_Vr_x73wwq.m4a"
+    },
+    {
+      "numfrase": 2,
+      "nivel": "A1-A2",
+      "fraseFr": "Être",
+      "fraseEs": "Ser / Estar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190181/2_Vr_xmbdmi.m4a"
+    },
+    {
+      "numfrase": 3,
+      "nivel": "A1-A2",
+      "fraseFr": "Avoir",
+      "fraseEs": "Tener",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190182/3_Vr_e3nabz.m4a"
+    },
+    {
+      "numfrase": 4,
+      "nivel": "A1-A2",
+      "fraseFr": "Venir",
+      "fraseEs": "Venir",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190183/4_Vr_y5nbe8.m4a"
+    },
+    {
+      "numfrase": 5,
+      "nivel": "A1-A2",
+      "fraseFr": "Aller",
+      "fraseEs": "Ir",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190185/5_Vr_rzno9m.m4a"
+    },
+    {
+      "numfrase": 6,
+      "nivel": "A1-A2",
+      "fraseFr": "Dire",
+      "fraseEs": "Decir",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190186/6_Vr_cj3ulq.mp3"
+    },
+    {
+      "numfrase": 7,
+      "nivel": "A1-A2",
+      "fraseFr": "Pouvoir",
+      "fraseEs": "Poder",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190188/7_Vr_aaegjd.mp3"
+    },
+    {
+      "numfrase": 8,
+      "nivel": "A1-A2",
+      "fraseFr": "Savoir",
+      "fraseEs": "Saber",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190189/8_Vr_awgzuo.mp3"
+    },
+    {
+      "numfrase": 9,
+      "nivel": "A1-A2",
+      "fraseFr": "Voir",
+      "fraseEs": "Ver",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190192/9_Vr_etpvvt.mp3"
+    },
+    {
+      "numfrase": 10,
+      "nivel": "B1-B2",
+      "fraseFr": "Vouloir",
+      "fraseEs": "Querer",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190193/10_Vr_ur4qeb.mp3"
+    },
+    {
+      "numfrase": 11,
+      "nivel": "B1-B2",
+      "fraseFr": "Falloir",
+      "fraseEs": "Hacer falta / Ser necesario",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190194/11_Vr_ckl6sg.mp3"
+    },
+    {
+      "numfrase": 12,
+      "nivel": "B1-B2",
+      "fraseFr": "Devoir",
+      "fraseEs": "Deber",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190197/12_Vr_q36lbb.mp3"
+    },
+    {
+      "numfrase": 13,
+      "nivel": "B1-B2",
+      "fraseFr": "Croire",
+      "fraseEs": "Creer",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190198/13_Vr_yhksgs.mp3"
+    },
+    {
+      "numfrase": 14,
+      "nivel": "B1-B2",
+      "fraseFr": "Trouver",
+      "fraseEs": "Encontrar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190199/14_Vr_vdjcbo.mp3"
+    },
+    {
+      "numfrase": 15,
+      "nivel": "B1-B2",
+      "fraseFr": "Donner",
+      "fraseEs": "Dar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190203/15_Vr_fs6eqv.mp3"
+    },
+    {
+      "numfrase": 16,
+      "nivel": "B1-B2",
+      "fraseFr": "Prendre",
+      "fraseEs": "Tomar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190204/16_Vr_stamhw.mp3"
+    },
+    {
+      "numfrase": 17,
+      "nivel": "B1-B2",
+      "fraseFr": "Parler",
+      "fraseEs": "Hablar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190205/17_Vr_wdtv8m.mp3"
+    },
+    {
+      "numfrase": 18,
+      "nivel": "B1-B2",
+      "fraseFr": "Aimer",
+      "fraseEs": "Amar / Gustar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190209/18_Vr_j9wjef.mp3"
+    },
+    {
+      "numfrase": 19,
+      "nivel": "B1-B2",
+      "fraseFr": "Passer",
+      "fraseEs": "Pasar",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190209/19_Vr_dlznqs.mp3"
+    },
+    {
+      "numfrase": 20,
+      "nivel": "B1-B2",
+      "fraseFr": "Mettre",
+      "fraseEs": "Poner",
+      "audioVerbos": "https://res.cloudinary.com/cargarfotos/video/upload/v1764190210/20_Vr_tnjmwk.mp3"
+    },
+    {
+      "numfrase": 21,
+      "nivel": "B1-B2",
+      "fraseFr": "Demander",
+      "fraseEs": "Preguntar / Pedir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 22,
+      "nivel": "B1-B2",
+      "fraseFr": "Tenir",
+      "fraseEs": "Sostener",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 23,
+      "nivel": "B1-B2",
+      "fraseFr": "Sembler",
+      "fraseEs": "Parecer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 24,
+      "nivel": "B1-B2",
+      "fraseFr": "Laisser",
+      "fraseEs": "Dejar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 25,
+      "nivel": "B1-B2",
+      "fraseFr": "Rester",
+      "fraseEs": "Quedarse",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 26,
+      "nivel": "B1-B2",
+      "fraseFr": "Penser",
+      "fraseEs": "Pensar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 27,
+      "nivel": "B1-B2",
+      "fraseFr": "Entendre",
+      "fraseEs": "Escuchar / Oír",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 28,
+      "nivel": "B1-B2",
+      "fraseFr": "Regarder",
+      "fraseEs": "Mirar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 29,
+      "nivel": "B1-B2",
+      "fraseFr": "Répondre",
+      "fraseEs": "Responder",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 30,
+      "nivel": "B1-B2",
+      "fraseFr": "Rendre",
+      "fraseEs": "Devolver",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 31,
+      "nivel": "B1-B2",
+      "fraseFr": "Connaître",
+      "fraseEs": "Conocer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 32,
+      "nivel": "B1-B2",
+      "fraseFr": "Paraître",
+      "fraseEs": "Parecer / Aparecer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 33,
+      "nivel": "B1-B2",
+      "fraseFr": "Arriver",
+      "fraseEs": "Llegar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 34,
+      "nivel": "B1-B2",
+      "fraseFr": "Sentir",
+      "fraseEs": "Sentir / Oler",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 35,
+      "nivel": "B1-B2",
+      "fraseFr": "Attendre",
+      "fraseEs": "Esperar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 36,
+      "nivel": "B1-B2",
+      "fraseFr": "Vivre",
+      "fraseEs": "Vivir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 37,
+      "nivel": "B1-B2",
+      "fraseFr": "Chercher",
+      "fraseEs": "Buscar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 38,
+      "nivel": "B1-B2",
+      "fraseFr": "Comprendre",
+      "fraseEs": "Comprender",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 39,
+      "nivel": "B1-B2",
+      "fraseFr": "Porter",
+      "fraseEs": "Llevar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 40,
+      "nivel": "B1-B2",
+      "fraseFr": "Devenir",
+      "fraseEs": "Convertirse / Llegar a ser",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 41,
+      "nivel": "B1-B2",
+      "fraseFr": "Entrer",
+      "fraseEs": "Entrar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 42,
+      "nivel": "B1-B2",
+      "fraseFr": "Retenir",
+      "fraseEs": "Retener",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 43,
+      "nivel": "B1-B2",
+      "fraseFr": "Écrire",
+      "fraseEs": "Escribir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 44,
+      "nivel": "B1-B2",
+      "fraseFr": "Tomber",
+      "fraseEs": "Caer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 45,
+      "nivel": "B1-B2",
+      "fraseFr": "Reprendre",
+      "fraseEs": "Reanudar / Retomar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 46,
+      "nivel": "B1-B2",
+      "fraseFr": "Commencer",
+      "fraseEs": "Comenzar / Empezar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 47,
+      "nivel": "B1-B2",
+      "fraseFr": "Suivre",
+      "fraseEs": "Seguir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 48,
+      "nivel": "B1-B2",
+      "fraseFr": "Montrer",
+      "fraseEs": "Mostrar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 49,
+      "nivel": "B1-B2",
+      "fraseFr": "Partir",
+      "fraseEs": "Partir / Irse",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 50,
+      "nivel": "B1-B2",
+      "fraseFr": "Mourir",
+      "fraseEs": "Morir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 51,
+      "nivel": "B1-B2",
+      "fraseFr": "Ouvrir",
+      "fraseEs": "Abrir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 52,
+      "nivel": "B1-B2",
+      "fraseFr": "Tenir",
+      "fraseEs": "Sostener",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 53,
+      "nivel": "B1-B2",
+      "fraseFr": "Recevoir",
+      "fraseEs": "Recibir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 54,
+      "nivel": "B1-B2",
+      "fraseFr": "Rire",
+      "fraseEs": "Reír",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 55,
+      "nivel": "B1-B2",
+      "fraseFr": "Lire",
+      "fraseEs": "Leer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 56,
+      "nivel": "B1-B2",
+      "fraseFr": "Mettre",
+      "fraseEs": "Poner",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 57,
+      "nivel": "B1-B2",
+      "fraseFr": "Prendre",
+      "fraseEs": "Tomar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 58,
+      "nivel": "B1-B2",
+      "fraseFr": "Dire",
+      "fraseEs": "Decir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 59,
+      "nivel": "B1-B2",
+      "fraseFr": "Boire",
+      "fraseEs": "Beber",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 60,
+      "nivel": "B1-B2",
+      "fraseFr": "Faire",
+      "fraseEs": "Hacer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 61,
+      "nivel": "B1-B2",
+      "fraseFr": "Dormir",
+      "fraseEs": "Dormir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 62,
+      "nivel": "B1-B2",
+      "fraseFr": "Courir",
+      "fraseEs": "Correr",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 63,
+      "nivel": "B1-B2",
+      "fraseFr": "Lire",
+      "fraseEs": "Leer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 64,
+      "nivel": "B1-B2",
+      "fraseFr": "Écrire",
+      "fraseEs": "Escribir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 65,
+      "nivel": "B1-B2",
+      "fraseFr": "Choisir",
+      "fraseEs": "Elegir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 66,
+      "nivel": "B1-B2",
+      "fraseFr": "Finir",
+      "fraseEs": "Terminar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 67,
+      "nivel": "B1-B2",
+      "fraseFr": "Grandir",
+      "fraseEs": "Crecer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 68,
+      "nivel": "B1-B2",
+      "fraseFr": "Réussir",
+      "fraseEs": "Lograr / Tener éxito",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 69,
+      "nivel": "B1-B2",
+      "fraseFr": "Obéir",
+      "fraseEs": "Obedecer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 70,
+      "nivel": "B1-B2",
+      "fraseFr": "Réfléchir",
+      "fraseEs": "Reflexionar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 71,
+      "nivel": "B1-B2",
+      "fraseFr": "Sortir",
+      "fraseEs": "Salir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 72,
+      "nivel": "B1-B2",
+      "fraseFr": "Servir",
+      "fraseEs": "Servir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 73,
+      "nivel": "B1-B2",
+      "fraseFr": "Venir",
+      "fraseEs": "Venir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 74,
+      "nivel": "B1-B2",
+      "fraseFr": "Aller",
+      "fraseEs": "Ir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 75,
+      "nivel": "B1-B2",
+      "fraseFr": "Voir",
+      "fraseEs": "Ver",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 76,
+      "nivel": "B1-B2",
+      "fraseFr": "Finir",
+      "fraseEs": "Terminar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 77,
+      "nivel": "B1-B2",
+      "fraseFr": "Crier",
+      "fraseEs": "Gritar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 78,
+      "nivel": "B1-B2",
+      "fraseFr": "Courir",
+      "fraseEs": "Correr",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 79,
+      "nivel": "B1-B2",
+      "fraseFr": "Permettre",
+      "fraseEs": "Permitir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 80,
+      "nivel": "B1-B2",
+      "fraseFr": "Songer",
+      "fraseEs": "Soñar / Pensar en",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 81,
+      "nivel": "B1-B2",
+      "fraseFr": "Offrir",
+      "fraseEs": "Ofrecer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 82,
+      "nivel": "B1-B2",
+      "fraseFr": "Présenter",
+      "fraseEs": "Presentar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 83,
+      "nivel": "B1-B2",
+      "fraseFr": "Apprendre",
+      "fraseEs": "Aprender",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 84,
+      "nivel": "B1-B2",
+      "fraseFr": "Souffrir",
+      "fraseEs": "Sufrir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 85,
+      "nivel": "B1-B2",
+      "fraseFr": "Exister",
+      "fraseEs": "Existir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 86,
+      "nivel": "B1-B2",
+      "fraseFr": "Envoyer",
+      "fraseEs": "Enviar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 87,
+      "nivel": "B1-B2",
+      "fraseFr": "Expliquer",
+      "fraseEs": "Explicar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 88,
+      "nivel": "B1-B2",
+      "fraseFr": "Manger",
+      "fraseEs": "Comer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 89,
+      "nivel": "B1-B2",
+      "fraseFr": "Valoir",
+      "fraseEs": "Valer",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 90,
+      "nivel": "B1-B2",
+      "fraseFr": "Oublier",
+      "fraseEs": "Olvidar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 91,
+      "nivel": "B1-B2",
+      "fraseFr": "Rentrer",
+      "fraseEs": "Regresar / Volver a entrar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 92,
+      "nivel": "B1-B2",
+      "fraseFr": "Pousser",
+      "fraseEs": "Empujar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 93,
+      "nivel": "B1-B2",
+      "fraseFr": "Occuper",
+      "fraseEs": "Ocupar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 94,
+      "nivel": "B1-B2",
+      "fraseFr": "Compter",
+      "fraseEs": "Contar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 95,
+      "nivel": "B1-B2",
+      "fraseFr": "Empêcher",
+      "fraseEs": "Impedir",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 96,
+      "nivel": "B1-B2",
+      "fraseFr": "Plaire",
+      "fraseEs": "Agradar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 97,
+      "nivel": "B1-B2",
+      "fraseFr": "Travailler",
+      "fraseEs": "Trabajar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 98,
+      "nivel": "B1-B2",
+      "fraseFr": "S'écrier",
+      "fraseEs": "Exclamar",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 99,
+      "nivel": "B1-B2",
+      "fraseFr": "Se détendre",
+      "fraseEs": "Relajarse",
+      "audioVerbos": ""
+    },
+    {
+      "numfrase": 100,
+      "nivel": "B1-B2",
+      "fraseFr": "Finir",
+      "fraseEs": "Terminar",
+      "audioVerbos": ""
+    }
+  ]
+}

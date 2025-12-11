@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principalextralight"
+    android:padding="0dp">
+
+    <!-- TopBar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/topBarExitButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_delete"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/cerrar"
+            app:tint="@color/textgrey" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/topBarLives"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- PROGRESS INDICATOR MATERIAL 3 -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressEjercicio"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_margin="20dp"
+        app:indicatorColor="@color/titles"
+        app:trackColor="@color/titlesextralight"
+        app:trackThickness="13dp"
+        app:trackCornerRadius="25dp" />
+
+    <TextView
+        android:id="@+id/exercice1Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/exercice_2"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tipoMemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/identifier_la_traduction"
+        android:textSize="24sp"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- SCROLL -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardContenedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="24dp"
+            app:strokeWidth="2dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/frasePrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:gravity="center"
+                    android:textColor="@color/titles"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fraseOp1"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/principallight"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/principallight" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fraseOp2"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/principallight"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/principallight" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fraseOp3"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/principallight"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/principallight" />
+
+                <TextView
+                    android:id="@+id/msgCompletado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/bloque_ya_completado_anteriormente"
+                    android:textColor="@color/textgrey"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtBloqueCompletado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/bloque_completado"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnRepetir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/titleslight"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:gravity="center"
+                    android:text="@string/repetir_ejercicio"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
+

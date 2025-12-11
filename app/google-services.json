@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "707483263825",
+    "project_id": "ohlaline",
+    "storage_bucket": "ohlaline.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707483263825:android:4220b875088a7d65d42970",
+        "android_client_info": {
+          "package_name": "com.vicoror.appandroidfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707483263825-175duud65hnp6b2t0v0a6cnaamr97h9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGV2MMYlI7h89cTViYSSVpRmhCrtXGB80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707483263825-175duud65hnp6b2t0v0a6cnaamr97h9g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "707483263825-uhmd4f38ueca11k700lhi1mb0l1uj6k4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vicoror.GPS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
