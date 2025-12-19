@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principalextralight">
+
+    <!-- TOP BAR -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@android:color/white"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <!-- Exit -->
+            <TextView
+                android:id="@+id/btnExit"
+                android:text="×"
+                android:textSize="32sp"
+                android:textColor="@color/principal"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <!-- Lives -->
+            <LinearLayout
+                android:id="@+id/livesStack"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/btnExit"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- Timer -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/timerContainer"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:strokeColor="@color/principal"
+                app:strokeWidth="2dp"
+                app:layout_constraintEnd_toStartOf="@id/btnPro"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="12dp">
+
+                <TextView
+                    android:id="@+id/timerLabel"
+                    android:text="100"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/principal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- PRO -->
+            <TextView
+                android:id="@+id/btnPro"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="∞"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/bg_pro_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingBottom="5dp"
+                android:clickable="true"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- TITULO -->
+    <TextView
+        android:id="@+id/tituloLabel"
+        android:text="Niveau 2"
+        android:textSize="28sp"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <!-- SUBTITULO -->
+    <TextView
+        android:id="@+id/subtituloLabel"
+        android:text="Écrivez la conjugaison du verbe"
+        android:textSize="20sp"
+        android:textColor="@color/titleslight"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tituloLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <!-- ScrollView con contenido REAL -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/subtituloLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp" android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPadding="10dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="ExtraText">
+
+                <TextView
+                    android:id="@+id/verbeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="28sp"
+                    android:textColor="@color/titles"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/sujetLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/titles"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/textInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/principal">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/respuestaTextField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Écrivez la conjugaison ici..."
+                        android:textSize="20sp"
+                        android:textColor="@color/textdark"
+                        android:textColorHint="@color/principal"
+                        android:gravity="center"
+                        android:fontFamily="@font/nunito_medium"
+                        android:padding="12dp"
+                        android:maxLength="50"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReponse"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Réponse ?"
+                    android:fontFamily="@font/poetsen_one_regular"
+                    android:textColor="@color/principal"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    app:cornerRadius="12dp"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="@color/principal"
+                    android:backgroundTint="@color/white"
+                    app:rippleColor="@color/titleslight"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="16dp">
+        <!-- BONNES -->
+        <TextView
+            android:id="@+id/bonnesLabel"
+            android:text="Bonnes Réponses: 0"
+            android:textSize="18sp"
+            android:textColor="@color/titles"
+            android:fontFamily="@font/poetsen_one_regular"
+            app:layout_constraintBottom_toTopOf="@id/btnSuivant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <!-- SUIVANT -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSuivant"
+            android:layout_width="320dp"
+            android:layout_height="63dp"
+            android:textSize="24sp"
+            android:text="@string/suivant"
+            android:fontFamily="@font/poetsen_one_regular"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/textdark"
+            app:rippleColor="@color/titlesextralight"
+            app:cornerRadius="12dp"
+            app:strokeWidth="5dp"
+            app:strokeColor="@color/principal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="40dp" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/macaronContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
