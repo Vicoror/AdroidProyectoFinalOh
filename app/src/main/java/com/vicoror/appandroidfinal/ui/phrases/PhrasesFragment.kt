@@ -14,12 +14,16 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.vicoror.appandroidfinal.R
 import com.vicoror.appandroidfinal.databinding.FragmentPhrasesBinding
+import com.vicoror.appandroidfinal.utils.MacaronManager
 import com.vicoror.appandroidfinal.viewModel.PhrasesViewModel
 import kotlinx.coroutines.NonCancellable.isActive
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlin.apply
 
 class PhrasesFragment : Fragment() {
@@ -33,6 +37,8 @@ class PhrasesFragment : Fragment() {
     private val rowHeight = 120
     private val jarSize = 100
     private val totalMacarons = 12
+
+    private lateinit var macaronManager: MacaronManager
 
     // Variable para guardar el bloque seleccionado
     private var selectedBlockIndex: Int = -1
@@ -70,6 +76,12 @@ class PhrasesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 1. Inicializar manager
+        macaronManager = MacaronManager(requireContext())
+
+        // 2. Mostrar vidas iniciales
+        updateLivesLabel()
+
         mode = args.mode
 
         if (mode == "verbs") {
@@ -80,7 +92,7 @@ class PhrasesFragment : Fragment() {
 
         Log.d(TAG, "=== PHRASES FRAGMENT INICIADO ===   MODE = $mode")
 
-        viewModel.loadJson(mode)   // ← ESTA ES LA CORRECCIÓN
+        viewModel.loadJson(mode)
         setupClickListeners()
         observeViewModel()
         binding.viewMsgPrincipal.bringToFront()
@@ -101,7 +113,14 @@ class PhrasesFragment : Fragment() {
     private fun setupClickListeners() {
         // BOTÓN CONTINUAR
         binding.btnMsgPrincipal.setOnClickListener {
+            // ✅ VERIFICAR SI HAY MACARONES ANTES DE NAVEGAR
+            if (!macaronManager.canPlay()) {
+                macaronManager.showRecoveryAlertDialog(requireContext())
+                return@setOnClickListener
+            }
+
             if (selectedBlockIndex != -1) {
+
                 Log.d(TAG, "Navegando al bloque: $selectedBlockIndex con mode: $mode")
 
                 // Usar Safe Args para pasar TODOS los parámetros
@@ -397,4 +416,11 @@ class PhrasesFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun updateLivesLabel() {
+        val current = macaronManager.currentMacaronCount
+
+        binding.livesLabel.text = current.toString()
+    }
+
 }

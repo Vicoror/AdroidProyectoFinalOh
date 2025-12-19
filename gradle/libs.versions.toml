@@ -28,7 +28,9 @@ credentials = "1.5.0"
 credentialsPlayServicesAuth = "1.5.0"
 googleid = "1.1.1"
 roomCompiler = "2.8.4"  # Si usas Room, necesitas también room-runtime
-googleServices = "4.4.2"  # Agrega esta línea
+googleServices = "4.4.2"
+firebaseCrashlyticsBuildtools = "3.0.6"
+
 
 [libraries]
 # AndroidX Core
@@ -53,6 +55,7 @@ firebase-auth = { module = "com.google.firebase:firebase-auth" }
 # No necesitas firebase-auth-ktx separado si usas BoM
 
 # Google Services
+google-firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 
 # Facebook
@@ -101,6 +104,8 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 
 # Para resolver conflictos
 jetbrains-annotations = { module = "org.jetbrains:annotations", version = "23.0.0" }
+firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

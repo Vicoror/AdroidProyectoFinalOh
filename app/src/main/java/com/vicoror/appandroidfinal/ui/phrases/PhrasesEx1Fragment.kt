@@ -20,6 +20,7 @@ import androidx.navigation.fragment.findNavController
 import com.vicoror.appandroidfinal.R
 import com.vicoror.appandroidfinal.databinding.DialogAlertBinding
 import com.vicoror.appandroidfinal.databinding.FragmentPhrasesEx1Binding
+import com.vicoror.appandroidfinal.utils.MacaronManager
 import com.vicoror.appandroidfinal.utils.NetworkChecker
 import com.vicoror.appandroidfinal.viewModel.PhrasesViewModel
 import kotlin.math.abs
@@ -43,6 +44,7 @@ class PhrasesEx1Fragment : Fragment() {
     private var mediaPlayer: MediaPlayer? = null
 
     private var dialogShown = false
+    private lateinit var macaronManager: MacaronManager
 
     companion object {
         private const val PREFS_NAME = "PhrasesProgress"
@@ -71,6 +73,7 @@ class PhrasesEx1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        macaronManager =    MacaronManager.getInstance(requireContext())
 
         if (!NetworkChecker.isOnline(requireContext())) {
             binding.fraseFrLabel.text = getString(R.string.esperando)
@@ -82,6 +85,7 @@ class PhrasesEx1Fragment : Fragment() {
 
         setupTopBar()
         setupSwipeGestures()
+        updateTopBarMacarons()
 
         binding.btnSuivant.setOnClickListener {
             if (!NetworkChecker.isOnline(requireContext())) {
@@ -97,9 +101,6 @@ class PhrasesEx1Fragment : Fragment() {
                 }
             }
         }
-
-
-
 
         //Botón anterior
         binding.btnAnterior?.setOnClickListener {
@@ -415,6 +416,10 @@ class PhrasesEx1Fragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        updateTopBarMacarons()  // ← Llama a una función separada
+    }
+
+    private fun updateTopBarMacarons() {
         val macarons = listOf(
             R.drawable.macaron_c5a4da,
             R.drawable.macaron_fffa9c,
@@ -425,9 +430,13 @@ class PhrasesEx1Fragment : Fragment() {
 
         binding.topBarLives.removeAllViews()
 
-        for (m in macarons) {
+        // 🔥 Obtener el número REAL de macarones actuales
+        val currentCount = macaronManager.currentMacaronCount
+        val totalMacarons = macarons.size
+
+        macarons.forEachIndexed { index, resId ->
             val img = androidx.appcompat.widget.AppCompatImageView(requireContext()).apply {
-                setImageResource(m)
+                setImageResource(resId)
                 val sizeInDp = 35
                 val scale = resources.displayMetrics.density
                 val sizeInPx = (sizeInDp * scale + 0.5f).toInt()
@@ -437,6 +446,10 @@ class PhrasesEx1Fragment : Fragment() {
                 }
                 scaleType = ImageView.ScaleType.FIT_CENTER
                 adjustViewBounds = true
+
+                // 🔥 Aplicar difuminado igual que en el juego
+
+                alpha = if (index < currentCount) 1f else 0.25f
             }
             binding.topBarLives.addView(img)
         }

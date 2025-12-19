@@ -11,12 +11,15 @@
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_margin="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:padding="12dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/white"
         app:cardElevation="4dp"
-        app:cardPreventCornerOverlap="true">
+        app:cardPreventCornerOverlap="true"
+        android:layout_alignParentTop="true">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -25,7 +28,8 @@
             app:cardElevation="16dp"
             app:cardBackgroundColor="@color/textgrey"
             app:cardUseCompatPadding="true"
-            android:outlineProvider="background">
+            android:outlineProvider="background"
+            >
 
             <!-- Imagen + Número (izquierda) -->
             <LinearLayout
@@ -188,7 +192,8 @@
                     android:text="@string/continuarphrases"
                     android:fontFamily="@font/nunito_medium"
                     android:layout_gravity="center"
-                    app:backgroundTint="@color/principal"/>
+                    app:backgroundTint="@color/principal"
+                    app:rippleColor="@color/titleslight"/>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

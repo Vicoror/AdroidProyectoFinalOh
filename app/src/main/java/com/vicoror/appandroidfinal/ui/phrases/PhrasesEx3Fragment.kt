@@ -29,6 +29,9 @@ import com.vicoror.appandroidfinal.viewModel.PhrasesViewModel
 import java.util.*
 import kotlin.math.min
 import android.view.inputmethod.InputMethodManager
+import androidx.lifecycle.lifecycleScope
+import com.vicoror.appandroidfinal.utils.MacaronManager
+import kotlinx.coroutines.launch
 
 
 class PhrasesEx3Fragment : Fragment() {
@@ -52,6 +55,7 @@ class PhrasesEx3Fragment : Fragment() {
 
     // SharedPreferences
     private lateinit var sharedPreferences: android.content.SharedPreferences
+    private lateinit var macaronManager: MacaronManager
 
     companion object {
         private const val PREFS_NAME = "PhrasesProgress"
@@ -76,6 +80,7 @@ class PhrasesEx3Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        macaronManager = MacaronManager.getInstance(requireContext())
 
         setupTopBar()
         setupButtons()
@@ -107,13 +112,15 @@ class PhrasesEx3Fragment : Fragment() {
     private fun setupTopBar() {
         binding.topBarExitButton.setOnClickListener {
             saveBlockProgress(selectedBlock, currentIndex)
-            // Navegar de regreso a PhrasesFragment con el modo actual
             val action = PhrasesEx3FragmentDirections
                 .actionPhrasesEx3FragmentToPhrasesFragment(mode = mode)
-
             findNavController().navigate(action)
         }
 
+        updateTopBarMacarons()  // ← LLAMA A FUNCIÓN SEPARADA
+    }
+
+    private fun updateTopBarMacarons() {
         val macarons = listOf(
             R.drawable.macaron_c5a4da,
             R.drawable.macaron_fffa9c,
@@ -124,9 +131,11 @@ class PhrasesEx3Fragment : Fragment() {
 
         binding.topBarLives.removeAllViews()
 
-        for (m in macarons) {
+        val currentCount = macaronManager.currentMacaronCount  // 🔥 USA macaronManager
+
+        macarons.forEachIndexed { index, resId ->
             val img = ImageView(requireContext()).apply {
-                setImageResource(m)
+                setImageResource(resId)
                 val sizeInDp = 35
                 val scale = resources.displayMetrics.density
                 val sizeInPx = (sizeInDp * scale + 0.5f).toInt()
@@ -136,13 +145,15 @@ class PhrasesEx3Fragment : Fragment() {
                 }
                 scaleType = ImageView.ScaleType.FIT_CENTER
                 adjustViewBounds = true
+
+                // 🔥 DIFUMINADO: izquierda a derecha
+                alpha = if (index < currentCount) 1f else 0.25f
             }
             binding.topBarLives.addView(img)
         }
 
         binding.topBarLives.gravity = android.view.Gravity.CENTER
     }
-
     private fun setupButtons() {
         binding.btnPista.setOnClickListener { pistaTapped() }
         binding.btnRespuesta.setOnClickListener { verRespuestaTapped() }
@@ -337,6 +348,12 @@ class PhrasesEx3Fragment : Fragment() {
     private fun validarTapped() {
         if (currentIndex >= phrases.size) return
 
+        // 🔥 VERIFICAR SI HAY MACARONES AL INICIO
+        if (!macaronManager.canPlay()) {
+            macaronManager.showRecoveryAlertDialog(requireContext())
+            return  // ⛔ NO PERMITIR JUGAR
+        }
+
         val respuestaUsuario = binding.inputEdit.text?.toString()?.trim() ?: ""
         val fraseCorrecta = phrases[currentIndex].fraseFr
 
@@ -348,9 +365,8 @@ class PhrasesEx3Fragment : Fragment() {
                 .show()
             return
         }
+
         hideKeyboard()
-        // TODO: Agregar lógica de MacaronManager si la tienes
-        // if (!MacaronManager.shared.canPlay()) { ... return }
 
         if (validarRespuesta(respuestaUsuario, fraseCorrecta)) {
             // Respuesta correcta
@@ -361,8 +377,24 @@ class PhrasesEx3Fragment : Fragment() {
             // Respuesta incorrecta
             intentosFallidos++
 
-            // TODO: Agregar lógica de perder vida si la tienes
-            // if (!perderVida()) { return }
+            // 🔥 PERDER VIDA SOLO EN PRIMER ERROR
+            if (intentosFallidos == 1) {
+                lifecycleScope.launch {
+                    val consumido = macaronManager.consumeMacaron()
+                    if (consumido) {
+                        updateTopBarMacarons()  // 🔥 ACTUALIZAR BARRA
+
+                        // Verificar si se acabaron los macarones
+                        if (macaronManager.currentMacaronCount <= 0) {
+                            Toast.makeText(
+                                requireContext(),
+                                "¡Se te acabaron los macarones!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+                }
+            }
 
             if (intentosFallidos >= 2 && !respuestaMostrada) {
                 binding.btnRespuesta.visibility = View.VISIBLE
@@ -385,8 +417,8 @@ class PhrasesEx3Fragment : Fragment() {
             }
         }
     }
-
     private fun mostrarModalCorrecta(correctText: String) {
+
         val dialog = BottomSheetDialog(requireContext())
         val view = layoutInflater.inflate(R.layout.bottom_sheet_correct, null)
 
@@ -412,6 +444,11 @@ class PhrasesEx3Fragment : Fragment() {
     }
 
     private fun mostrarModalIncorrecta(correctText: String) {
+
+        if (!macaronManager.canPlay()) {
+            macaronManager.showRecoveryAlertDialog(requireContext())
+            return
+        }
         val dialog = BottomSheetDialog(requireContext())
         val view = layoutInflater.inflate(R.layout.bottom_sheet_incorrect, null)
 

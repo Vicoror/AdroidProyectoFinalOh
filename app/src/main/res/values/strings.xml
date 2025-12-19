@@ -3,7 +3,7 @@
     <string name="tvBonjour">Bonjour !</string>
     <string name="btnLogin">Haz login con tu e-mail</string>
     <string name="tvContinuar">O continua con:</string>
-    <string name="tvTerminos">Terminos de servicio. Puedes eliminar tu cuenta en tus configuraciones.</string>
+    <string name="tvTerminos"><![CDATA[Términos de servicio. Puedes eliminar tu cuenta en tus configuraciones.]]></string>
     <string name="etDatos">Ingresa tus datos</string>
     <string name="etEmail">Escribe tu e-mail</string>
     <string name="etPassword">Escribe tu contraseña</string>
@@ -111,4 +111,48 @@
     <string name="email_y_contrase_a_requeridos">Email y contraseña requeridos</string>
     <string name="la_contrase_a_debe_tener_al_menos_6_caracteres">La contraseña debe tener al menos 6 caracteres</string>
     <string name="error_desconocido_intenta_nuevamente">Error desconocido. Intenta nuevamente.</string>
+    <string name="choisissez_le_temps_verbal">Choisissez le temps verbal</string>
+    <string name="macaron_decorativo">Macaron décoratif</string>
+
+    <!-- Títulos de tiempos verbales -->
+    <string name="present_title">Présent de l\'indicatif</string>
+    <string name="passe_compose_title">Passé composé</string>
+    <string name="futur_simple_title">Futur simple</string>
+    <string name="imparfait_title">Imparfait de l\'indicatif</string>
+
+    <!-- Mensajes para conjugaciones -->
+    <string name="vamos_con_las_conjugaciones_del_bloque">Vamos con las conjugaciones del bloque %1$d\n(%2$s)</string>
+    <string name="continuaralbloque">Continuar al bloque %d</string>
+
+    <!-- Textos del botón de retorno -->
+    <string name="retour">Retour</string>
+
+    <!-- Descripciones de contenido -->
+    <string name="macaron_conjugacion">Macaron de conjugación</string>
+    <string name="bloque_conjugaciones">Bloque de conjugaciones</string>
+
+    <string name="resultado_ejercicio">Lograste %1$d/%2$d respuestas correctas</string>
+
+    <string name="terminos_contenido">
+    <b>1. Aceptación de los Términos</b>\n
+    Al utilizar esta aplicación, aceptas estos términos de servicio.\n\n
+
+    <b>2. Uso del Servicio</b>\n
+    • Debes tener al menos 13 años para usar esta aplicación.\n
+    • Eres responsable de tu cuenta y contraseña.\n
+    • No uses la aplicación para actividades ilegales.\n\n
+
+    <b>3. Contenido del Usuario</b>\n
+    • Eres responsable del contenido que publiques.\n
+    • Nos reservamos el derecho de eliminar contenido inapropiado.\n\n
+
+    <b>4. Privacidad</b>\n
+    Tu privacidad es importante. Consulta nuestra Política de Privacidad.\n\n
+
+    <b>5. Modificaciones</b>\n
+    Podemos modificar estos términos en cualquier momento.\n\n
+
+    <b>6. Contacto</b>\n
+    Para preguntas sobre estos términos, contáctanos en: soporte@tudominio.com
+</string>
 </resources>

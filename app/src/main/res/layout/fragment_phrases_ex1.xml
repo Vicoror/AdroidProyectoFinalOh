@@ -17,7 +17,8 @@
         android:background="@color/white"
         android:gravity="center_vertical"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        android:layout_marginTop="30dp">
 
         <ImageButton
             android:id="@+id/topBarExitButton"
@@ -116,15 +117,19 @@
                     android:gravity="center"
                     android:layout_marginTop="20dp" />
 
-                <ImageButton
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSonido"
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_sound"
-                    app:tint="@color/principal"
-                    android:scaleType="centerInside"
-                    android:layout_marginTop="25dp" />
+                    app:icon="@drawable/ic_sound"
+                    app:iconTint="@color/principal"
+                    app:iconSize="60dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:rippleColor="@color/titleslight"
+                    app:cornerRadius="36dp"
+                    android:layout_gravity="center"
+                    app:iconGravity="textStart"
+                    android:layout_marginTop="20dp" />
 
                 <TextView
                     android:id="@+id/msgCompletado"

@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_homeFragment_to_phrasesFragment"
             app:destination="@id/phrasesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_menuConjugaisonsFragment"
+            app:destination="@id/menuConjugaisonsFragment" />
     </fragment>
 
     <!-- PHRASES FRAGMENT (CORREGIDO: UN SOLO ARGUMENTO MODE) -->
@@ -210,6 +213,86 @@
                 android:defaultValue="phrases" />
         </action>
 
+    </fragment>
+    <fragment
+        android:id="@+id/menuConjugaisonsFragment"
+        android:name="com.vicoror.appandroidfinal.ui.conjugaisons.MenuConjugaisonsFragment"
+        android:label="fragment_menu_conjugaisons"
+        tools:layout="@layout/fragment_menu_conjugaisons" >
+        <action
+            android:id="@+id/action_menuConjugaisonsFragment_to_conjugaisonsFragment"
+            app:destination="@id/conjugaisonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conjugaisonsFragment"
+        android:name="com.vicoror.appandroidfinal.ui.conjugaisons.ConjugaisonsFragment"
+        android:label="fragment_conjugaisons"
+        tools:layout="@layout/fragment_conjugaisons">
+
+    <argument
+        android:name="selectedTense"
+        app:argType="string"
+        android:defaultValue="" />
+
+    <argument
+        android:name="jsonFileName"
+        app:argType="string"
+        android:defaultValue="" />
+        <action
+            android:id="@+id/action_conjugaisonsFragment_to_nivel1ConjugaisonsFragment"
+            app:destination="@id/nivel1ConjugaisonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nivel1ConjugaisonsFragment"
+        android:name="com.vicoror.appandroidfinal.ui.conjugaisons.Nivel1ConjugaisonsFragment"
+        android:label="fragment_nivel1_conjugaisons"
+        tools:layout="@layout/fragment_nivel1_conjugaisons">
+
+        <!-- ESTOS ARGUMENTOS SON OBLIGATORIOS -->
+        <argument
+            android:name="selectedTense"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="blockIndex"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+        <argument
+            android:name="jsonFileName"
+            app:argType="string" />
+
+        <argument
+            android:name="conjugacionIds"
+            app:argType="string[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_nivel1ConjugaisonsFragment_to_nivel2ConjugaisonsFragment"
+            app:destination="@id/nivel2ConjugaisonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nivel2ConjugaisonsFragment"
+        android:name="com.vicoror.appandroidfinal.ui.conjugaisons.Nivel2ConjugaisonsFragment"
+        android:label="fragment_nivel2_conjugaisons"
+        tools:layout="@layout/fragment_nivel2_conjugaisons" >
+        <argument
+            android:name="selectedTense"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="blockIndex"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+        <argument
+            android:name="jsonFileName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nivel2ConjugaisonsFragment_to_conjugaisonsFragment"
+            app:destination="@id/conjugaisonsFragment" />
     </fragment>
 
 </navigation>

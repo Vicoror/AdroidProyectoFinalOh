@@ -9,18 +9,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.vicoror.appandroidfinal.R
 import com.vicoror.appandroidfinal.databinding.DialogAlertBinding
 import com.vicoror.appandroidfinal.databinding.FragmentPhrasesEx2Binding
+import com.vicoror.appandroidfinal.utils.MacaronManager
 import com.vicoror.appandroidfinal.utils.NetworkChecker
 import com.vicoror.appandroidfinal.viewModel.PhrasesViewModel
+import kotlinx.coroutines.launch
 import kotlin.math.min
 import kotlin.random.Random
 
@@ -41,6 +45,8 @@ class PhrasesEx2Fragment : Fragment() {
     // Para controlar la frase actual y opciones
     private var currentCorrectAnswer: String = ""
     private var isShowingFrench = true
+
+    private lateinit var macaronManager: MacaronManager
 
     private val sharedPreferences by lazy {
         requireContext().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
@@ -73,10 +79,12 @@ class PhrasesEx2Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        macaronManager = MacaronManager.getInstance(requireContext())
+
         mode = args.mode
         Log.d("PHRASES_EX2", "Modo actual: $mode")
 
-        setupTopBar()
+        updateTopBarMacarons()
         setupButtons()
         setupObservers()
 
@@ -154,16 +162,21 @@ class PhrasesEx2Fragment : Fragment() {
     }
 
     private fun setupTopBar() {
-            binding.topBarExitButton.setOnClickListener {
-                saveBlockProgress(selectedBlock, currentIndex)
+        binding.topBarExitButton.setOnClickListener {
+            saveBlockProgress(selectedBlock, currentIndex)
 
-                // Navegar de regreso a PhrasesFragment con el modo actual
-                val action = PhrasesEx2FragmentDirections
-                    .actionPhrasesEx2FragmentToPhrasesFragment(mode = mode)
+            // Navegar de regreso a PhrasesFragment con el modo actual
+            val action = PhrasesEx2FragmentDirections
+                .actionPhrasesEx2FragmentToPhrasesFragment(mode = mode)
 
-                findNavController().navigate(action)
-            }
+            findNavController().navigate(action)
+        }
 
+        // 🔥 LLAMA A LA FUNCIÓN DE ACTUALIZACIÓN
+        updateTopBarMacarons()
+    }
+
+    private fun updateTopBarMacarons() {
         val macarons = listOf(
             R.drawable.macaron_c5a4da,
             R.drawable.macaron_fffa9c,
@@ -174,9 +187,12 @@ class PhrasesEx2Fragment : Fragment() {
 
         binding.topBarLives.removeAllViews()
 
-        for (m in macarons) {
+        val currentCount = macaronManager.currentMacaronCount  // 🔥 Usa macaronManager
+        val totalMacarons = macarons.size
+
+        macarons.forEachIndexed { index, resId ->
             val img = ImageView(requireContext()).apply {
-                setImageResource(m)
+                setImageResource(resId)
                 val sizeInDp = 35
                 val scale = resources.displayMetrics.density
                 val sizeInPx = (sizeInDp * scale + 0.5f).toInt()
@@ -186,6 +202,9 @@ class PhrasesEx2Fragment : Fragment() {
                 }
                 scaleType = ImageView.ScaleType.FIT_CENTER
                 adjustViewBounds = true
+
+                // 🔥 Misma lógica de difuminado que en otros fragmentos
+                alpha = if (index < currentCount) 1f else 0.25f
             }
             binding.topBarLives.addView(img)
         }
@@ -415,6 +434,10 @@ class PhrasesEx2Fragment : Fragment() {
     }
 
     private fun mostrarModalIncorrecta(correctText: String) {
+        if (!macaronManager.canPlay()) {
+            macaronManager.showRecoveryAlertDialog(requireContext())
+            return
+        }
         val dialog = BottomSheetDialog(requireContext())
         val view = layoutInflater.inflate(R.layout.bottom_sheet_incorrect, null)
 
@@ -437,9 +460,31 @@ class PhrasesEx2Fragment : Fragment() {
         dialog.setContentView(view)
         dialog.show()
 
-        dialog.setOnDismissListener {
-
+        lifecycleScope.launch {
+            val consumido = macaronManager.consumeMacaron()
+            if (consumido) {
+                // Actualizar la barra visual
+                updateTopBarMacarons()
+                // Verificar si se acabaron los macarones
+                if (macaronManager.currentMacaronCount <= 0) {
+                    // Deshabilitar interacción si no hay más macarones
+                    disableGameInteraction()
+                }
+            }
         }
+    }
+
+    private fun disableGameInteraction() {
+        // Deshabilitar botones de opción si los tienes
+        // binding.btnOption1?.isEnabled = false
+        // binding.btnOption2?.isEnabled = false
+
+        // O mostrar mensaje en la UI
+        Toast.makeText(
+            requireContext(),
+            "¡Se te acabaron los macarones!",
+            Toast.LENGTH_LONG
+        ).show()
     }
 
     private fun avanzarSiguienteFrase() {

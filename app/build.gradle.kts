@@ -7,6 +7,7 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.dagger.hilt.android")
     kotlin("kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -83,6 +84,7 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.firebase.crashlytics.buildtools)
     kapt(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
@@ -110,6 +112,7 @@ dependencies {
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
+    implementation(libs.firebase.firestore)
 
     // Room (si lo necesitas)
     // implementation(libs.androidx.room.runtime)
@@ -117,6 +120,7 @@ dependencies {
 
     // Para resolver conflictos de annotations
     implementation(libs.jetbrains.annotations)
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 
     // Testing
     testImplementation(libs.junit)

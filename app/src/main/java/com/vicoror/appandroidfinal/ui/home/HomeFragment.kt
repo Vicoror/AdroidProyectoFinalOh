@@ -52,6 +52,12 @@ class HomeFragment : Fragment() {
                 bundle
             )
         }
+
+        binding.btnConjug.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_homeFragment_to_menuConjugaisonsFragment
+            )
+        }
     }
 
 

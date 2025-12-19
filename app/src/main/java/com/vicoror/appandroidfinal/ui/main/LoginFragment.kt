@@ -2,10 +2,19 @@ package com.vicoror.appandroidfinal.ui.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.TextPaint
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.text.style.UnderlineSpan
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.facebook.AccessToken
@@ -19,6 +28,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -64,7 +74,7 @@ class LoginFragment : Fragment() {
 
         // Configurar Facebook Login
         //setupFacebookLogin()
-
+        setupTerminosTextView()
         // Botón login normal (email/password)
         binding.btnLogin.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_loginDatosFragment)
@@ -76,9 +86,9 @@ class LoginFragment : Fragment() {
         }
 
         // Botón Facebook
-        binding.facebook.setOnClickListener {
+      /*  binding.facebook.setOnClickListener {
             signInWithFacebook()
-        }
+        }*/
 
         // Verificar si ya hay usuario logueado
         checkCurrentUser()
@@ -231,7 +241,73 @@ class LoginFragment : Fragment() {
         }
     }
 
-    override fun onDestroyView() {
+    private fun setupTerminosTextView() {
+        val tvTerminos = binding.tvTerminos
+        val textoCompleto = getString(R.string.tvTerminos)
+        val terminosText = "Términos de servicio"
+
+        // Encontrar posición de "Términos de servicio"
+        val startIndex = textoCompleto.indexOf(terminosText)
+        val endIndex = startIndex + terminosText.length
+
+        if (startIndex != -1) {
+            val spannable = SpannableString(textoCompleto)
+
+            // 1. SUBRAYAR
+            spannable.setSpan(UnderlineSpan(), startIndex, endIndex, 0)
+
+            // 2. HACER CLICKABLE (¡IMPORTANTE! usa ClickableSpan)
+            spannable.setSpan(
+                object : ClickableSpan() {
+                    override fun onClick(widget: View) {
+                        mostrarModalTerminos()  // Esto SÍ se ejecutará
+                    }
+
+                    override fun updateDrawState(ds: TextPaint) {
+                        super.updateDrawState(ds)
+                        // Cambiar color para indicar que es clickable
+                        ds.color = ContextCompat.getColor(requireContext(), R.color.principallight)
+                        ds.isUnderlineText = true  // Mantener subrayado
+                    }
+                },
+                startIndex,
+                endIndex,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+
+            // 3. Asignar al TextView
+            tvTerminos.text = spannable
+            tvTerminos.movementMethod = LinkMovementMethod.getInstance()  // ¡IMPORTANTE!
+
+        } else {
+            // Fallback
+            val styledText = Html.fromHtml(getString(R.string.tvTerminos), Html.FROM_HTML_MODE_COMPACT)
+            tvTerminos.text = styledText
+            tvTerminos.setOnClickListener {
+                mostrarModalTerminos()
+            }
+        }
+    }
+
+    private fun mostrarModalTerminos() {
+        val dialog = BottomSheetDialog(requireContext())
+        val view = layoutInflater.inflate(R.layout.modal_terminos, null)
+
+        // ✅ ASIGNAR EL TEXTO (esto es lo que falta)
+        val tvContenido = view.findViewById<TextView>(R.id.tvContenido)
+        val textoHtml = Html.fromHtml(getString(R.string.terminos_contenido), Html.FROM_HTML_MODE_COMPACT)
+        tvContenido.text = textoHtml  // ¡IMPORTANTE!
+        tvContenido.movementMethod = LinkMovementMethod.getInstance()
+
+        dialog.setContentView(view)
+        dialog.show()
+
+        // Ajustar altura
+        dialog.behavior.peekHeight = (resources.displayMetrics.heightPixels * 0.8).toInt()
+        dialog.behavior.isDraggable = true
+    }
+
+override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
